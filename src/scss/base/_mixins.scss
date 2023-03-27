@@ -6,16 +6,19 @@
         @content;
     }
 }
+
 @mixin tablet {
     @media (min-width: v.$tablet) {
         @content;
     }
 }
+
 @mixin desktop {
     @media (min-width: v.$desktop) {
         @content;
     }
 }
+
 @mixin desktopXL {
     @media (min-width: v.$desktopXL) {
         @content;
@@ -49,4 +52,11 @@
     display: grid;
     gap: $gap;
     grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin backgroundImage($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
